@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex, nofollow">
+    <script>
+      var path = window.location.pathname;
+      var search = window.location.search;
+      // Legacy links still carry the old /vfo-portal/ base (emails already sent, or
+      // the github.io -> vfoportal.com redirect). Strip it so e.g.
+      // /vfo-portal/pay?token=... resolves to /pay?token=... on the root domain.
+      if (path.indexOf('/vfo-portal/') === 0) {
+        path = path.slice('/vfo-portal'.length);
+      }
+      var base = '/';
+      if (path.startsWith(base)) {
+        var rest = path.slice(base.length);
+        sessionStorage.setItem('vfo_redirect', rest + search);
+      }
+      window.location.replace(base);
+    </script>
+  </head>
+  <body></body>
+</html>
