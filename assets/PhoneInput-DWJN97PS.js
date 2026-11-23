@@ -1,1 +1,0 @@
-import{u}from"./index-D4-ivwr6.js";import{d as a}from"./formatters-nd6EWXjb.js";function s({value:t,onChange:e,style:o,placeholder:n="(555) 555-5555",...p}){return u.jsx("input",{type:"tel",inputMode:"tel",autoComplete:"tel",value:t||"",placeholder:n,onChange:r=>e(a(r.target.value,t||"")),style:o,...p})}export{s as P};
